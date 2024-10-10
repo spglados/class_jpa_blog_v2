@@ -1,29 +1,25 @@
-{{>layout/header}}
+{{> layout/header}}
 
 <main class="container p-5 content">
+
     <div class="card">
+
         <div class="card-header"><b>{{name}}</b></div>
-        <div class="card-body" >
-            <form action="/login" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="card_body">
+            <form action="/login-form" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="enter username" name="username">
+                    <input type="text" class="form-control" placeholder="enter username" name="username" value="길동">
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="enter password" name="password">
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="enter email" name="email">
+                    <input type="password" class="form-control" placeholder="enter password" name="password" value="1234">
                 </div>
 
                 <button type="submit" class="btn btn-primary form-control">로그인</button>
-
             </form>
-
         </div>
-    </div>
 
+    </div>
 
 </main>
 

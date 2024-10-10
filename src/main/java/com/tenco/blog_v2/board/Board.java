@@ -1,6 +1,6 @@
-package com.tenco.blog_v1.board;
+package com.tenco.blog_v2.board;
 
-import com.tenco.blog_v1.user.User;
+import com.tenco.blog_v2.user.User;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +21,7 @@ public class Board {
     private String title;
     private String content;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user; // 게시글 작성자 정보
 
